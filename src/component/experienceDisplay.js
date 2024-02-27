@@ -27,7 +27,7 @@ const ReviewDisplay = ({ review }) => {
                 {review.description}
             </div>
 
-            <a href={review.review_link} className="btn btn-success" target="_blank">Website</a>
+            <a href={review.original_link} className="btn btn-success" target="_blank">Website</a>
 
             <hr />
         </div>

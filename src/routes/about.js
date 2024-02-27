@@ -1,8 +1,6 @@
 import React from "react";
 import portfolioImage from "../assets/image/pp.png";
 import cv from "../assets/cv/resume.pdf";
-import fb from "../assets/social_media/fb.png";
-import ig from "../assets/social_media/ig.png";
 import gh from "../assets/social_media/gh.png";
 import li from "../assets/social_media/li.png";
 import tw from "../assets/social_media/tw.png";
@@ -25,7 +23,7 @@ function about() {
             </div>
             <div>
               <span className="greeting-designation">
-                Graduate Student || Co-Founder at {"Mokshya.io"}
+                Graduate Student at Iowa State University
               </span>
             </div>
 
@@ -78,7 +76,7 @@ function about() {
       <div className="container aboutme">
         <div className="row">
           <div className="col-md-12 text-center pb-4">
-            <h1 className="greeting" style={{ color: "#9B4819" }}>
+            <h1 className="greeting" style={{ color: "#9B4812" }}>
               About Me
             </h1>
           </div>
@@ -92,11 +90,6 @@ function about() {
               Before joining Iowa State University, I worked as a Co-founder and Computational Analytics and 
               Smart Contract Engineer for open source contributing startup <a href="https://mokshya.io" target="_blank">Mokshya</a> . I have also worked as a Computational Analytics 
               and Smart Contract Engineer for a startup called <a href="https://zebec.io" target="_blank">Zebec</a> utilizing my data analytics, machine learning and blockchain skills.
-            </p>
-            <p>
-              I have got an enormous opportunity to experience to emerging technology of Blockchain and AI, in the technical frontier itself.
-              The hard earned experience has been a great asset for me to understand both the technology and its potential to change the world. Similarly, Enough patience and
-              perseverance to learn and implement the technology that are very new.
             </p>
           </div>
 
