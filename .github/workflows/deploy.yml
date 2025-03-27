@@ -1,0 +1,32 @@
+name: Deploy React App
+
+on:
+  push:
+    branches:
+      - master  # Trigger on push to master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Use Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'  # Use latest LTS version
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build the React app
+      run: npm run build
+
+    - name: Deploy to Build Branch
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: build  # Deploy to build branch
+        folder: build  # React build output folder
+        clean: true    # Removes previous build files
