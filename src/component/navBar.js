@@ -8,29 +8,47 @@ const Navbar = () => {
           Samundra Karki
         </NavLink>
         <div className="nav-links">
+          <div className="nav-links-box">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "nav-link is-active" : "nav-link"
+              }
+              to="/"
+            >
+              About
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "nav-link is-active" : "nav-link"
+              }
+              to="/projects"
+            >
+              Projects
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "nav-link is-active" : "nav-link"
+              }
+              to="/lr"
+            >
+              Experience
+            </NavLink>
+          </div>
           <NavLink
             className={({ isActive }) =>
-              isActive ? "nav-link is-active" : "nav-link"
+              isActive ? "nav-link nav-link-fun is-active" : "nav-link nav-link-fun"
             }
-            to="/"
+            to="/articles"
           >
-            About
+            Blogs
           </NavLink>
           <NavLink
             className={({ isActive }) =>
-              isActive ? "nav-link is-active" : "nav-link"
+              isActive ? "nav-link nav-link-fun is-active" : "nav-link nav-link-fun"
             }
-            to="/projects"
+            to="/hobbies"
           >
-            Projects
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? "nav-link is-active" : "nav-link"
-            }
-            to="/lr"
-          >
-            Experience
+            Hobbies
           </NavLink>
         </div>
       </div>

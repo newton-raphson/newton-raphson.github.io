@@ -1,22 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import portfolioImage from "../assets/image/pp.png";
 import cv from "../assets/cv/resume.pdf";
 import gh from "../assets/social_media/gh.png";
 import li from "../assets/social_media/li.png";
-import tw from "../assets/social_media/tw.png";
-import mail from "../assets/social_media/mail.png";
 
 const About = () => {
+  const [toast, setToast] = useState("");
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = async () => {
+    const email = "samundra@iastate.edu";
+    try {
+      if (navigator?.clipboard?.writeText) {
+        await navigator.clipboard.writeText(email);
+      } else {
+        const temp = document.createElement("textarea");
+        temp.value = email;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand("copy");
+        document.body.removeChild(temp);
+      }
+      setToast("Email address copied");
+      setCopied(true);
+    } catch (error) {
+      setToast("Copy failed");
+      setCopied(false);
+    }
+    setTimeout(() => {
+      setToast("");
+      setCopied(false);
+    }, 1800);
+  };
   return (
     <main className="page">
       <div className="container-narrow">
         <section className="hero">
-          <div>
+          <div className="hero-content">
             <div className="eyebrow">PhD Researcher</div>
             <h1>Samundra Karki</h1>
             <p className="lead">
               PhD researcher in AI-native geometry and physics-based simulation
               at Iowa State University.
+            </p>
+            <p className="section-subtitle" style={{ marginBottom: "1rem" }}>
+              Ex Co-Founder, Mokshya Protocol
             </p>
             <p className="section-subtitle" style={{ marginBottom: "1.5rem" }}>
               Ames, IA · (+1) 515-735-6896 · samundra@iastate.edu
@@ -25,17 +53,15 @@ const About = () => {
               <a className="button-primary" href={cv} target="_blank" rel="noreferrer">
                 Download CV
               </a>
-              <a
-                className="button-ghost"
-                href="mailto:samundra@iastate.edu"
+              <button
+                type="button"
+                className={copied ? "button-ghost button-copied" : "button-ghost"}
+                onClick={copyEmail}
               >
-                Contact
-              </a>
+                {copied ? "Copied" : "Copy Email"}
+              </button>
             </div>
             <div className="social-strip">
-              <a href="mailto:samundra@iastate.edu" target="_blank" rel="noreferrer">
-                <img src={mail} alt="Email" />
-              </a>
               <a href="https://github.com/newton-raphson" target="_blank" rel="noreferrer">
                 <img src={gh} alt="GitHub" />
               </a>
@@ -46,15 +72,21 @@ const About = () => {
               >
                 <img src={li} alt="LinkedIn" />
               </a>
-              <a href="https://twitter.com/0xSamstine" target="_blank" rel="noreferrer">
-                <img src={tw} alt="Twitter" />
+              <a
+                className="social-text"
+                href="https://scholar.google.com/citations?user=xGuJxccAAAAJ&hl=en&oi=ao"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Google Scholar
               </a>
             </div>
           </div>
-          <div className="hero-media">
-            <img src={portfolioImage} alt="Portrait of Samundra Karki" />
+          <div className="hero-media hero-content">
+            <img className="portrait-tilt" src={portfolioImage} alt="Portrait of Samundra Karki" />
           </div>
         </section>
+        {toast ? <div className="toast">{toast}</div> : null}
 
         <section className="section">
           <h2 className="section-title">Profile</h2>

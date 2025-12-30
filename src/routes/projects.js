@@ -4,6 +4,21 @@ import ProjectDisplay from "../component/projectDisplay";
 const Projects = () => {
   const projectsList = [
     {
+      title: "MUNA: GPU Morton-Octrees for PDE-Agnostic AMR",
+      keywords: [
+        "GPU",
+        "Morton-Octrees",
+        "PDE-Agnostic AMR",
+        "CUDA",
+        "Octree",
+        "AMR",
+      ],
+      description:
+        "This project explores the use of GPU-accelerated Morton-Octrees for adaptive mesh refinement in solving partial differential equations (PDEs). The implementation focuses on efficient memory management and parallel processing to enable scalable simulations.",
+      document_link: "",
+      github_link: "https://github.com/newton-raphson/gpuTreeFluxReconstruction",
+    },
+    {
       title: "Signed Distance Representation of 3D Objects",
       keywords: [
         "Pytorch",
@@ -25,18 +40,9 @@ const Projects = () => {
       keywords: ["Pytorch", "NURBS", "AutoEncoders", "Spline", "3D Object", "Python"],
       document_link: "",
       description:
-        "In today’s information-rich world, scientific publications play a pivotal role in disseminating knowledge and advancing research across various disciplines. The exponential growth of digital repositories, such as arXiv, has made it increasingly challenging for researchers to keep up with the vast volume of available literature. To address this challenge, we propose a novel approach that harnesses the power of Kaggle datasets for arXiv paper topic classification and builds a robust recommendation system.",
+        "Learning compact field representations from spline-based geometry using autoencoders. This work maps NURBS curves and surfaces to volumetric fields for downstream tasks like reconstruction and analysis, with an emphasis on stable latent codes and differentiable geometry processing.",
       github_link:
-        "https://github.com/NirajanBekoju/Arxiv-Topic-Classification-and-Paper-Recommendation-System",
-    },
-    {
-      title: "Vision Nerf Dissection",
-      keywords: ["Wine Quality", "Data Analysis", "Machine Learning", "Random Forest", "Django"],
-      description:
-        "This machine learning project focused on predicting the quality of red wines based on their chemical properties. To achieve this, several preprocessing techniques were applied, including scaling using different methods and applying log and boxcox transformations. Exploratory data analysis was also performed to better understand the relationships between the features and the target variable. Several popular machine learning algorithms were then trained and compared, including logistic regression, SVM, random forest, decision trees, and boosting algorithms. Performance metrics such as accuracy, precision, recall, and F1 score were used to identify the best algorithm and preprocessing technique. The random forest model with id = 1 was found to be the most effective,            with a micro F1 score of 0.73.            Overall, this project highlights the importance of proper preprocessing techniques and algorithm            selection for developing an accurate and effective model for wine quality classification. The            findings have practical implications for industries such as wine production, where the ability to            predict wine quality could be invaluable.",
-      document_link:
-        "https://github.com/NirajanBekoju/Wine-Quality-Classification/blob/master/Report/main.pdf",
-      github_link: "https://github.com/NirajanBekoju/Wine-Quality-Classification",
+        "https://github.com/newton-raphson/splinetofield",
     },
     // {
     //   title: "Fourier Series Drawing",

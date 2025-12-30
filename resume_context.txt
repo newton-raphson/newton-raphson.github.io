@@ -1,0 +1,109 @@
+SAMUNDRA KARKI
+(+1) 515-735-6896 | samundra@iastate.edu | Ames, IA
+GitHub: newton-raphson | LinkedIn
+
+Profile
+
+PhD researcher in AI-native geometry and physics-based simulation at Iowa State University (advisor: B.
+Ganapathysubramanian). My work bridges 3D geometry understanding, neural fields, and scal-
+able physics engines. I build INR-based geometry, octree FEM, and shifted-boundary solvers that enable
+differentiable, GPU-native simulation directly on implicit or generative 3D assets—advancing the next gen-
+eration of real-time digital worlds.
+I am now exploring fast INR editing, geometry-aware AI, and
+GPU-accelerated physics for immersive systems.
+
+Research Interests
+
+• Neural 3D geometry: INR/SDF, generative editing, implicit shape reasoning
+
+• Real-time physics: octree FEM, immersed methods, differentiable simulation
+
+• Large-scale distributed AI systems and GPU-native PDE solvers
+
+Selected Publications
+
+• S. Karki, M. Shadkhah, C. H. Yang, A. Balu, G. Scovazzi, and A. Krishnamurthy. Direct Flow Simu-
+lations with Implicit Neural Representations of Complex Geometry. Computer Methods in Applied
+Mechanics and Engineering, Vol. 446, Art. 118248, 2025.
+
+• S. Karki, M. C. Hsu, A. Krishnamurthy, and B. Ganapathysubramanian. Mechanics Simulations Using
+Implicit Neural Representations of Complex Geometries. Computer-Aided Design, Art. 103978, 2025.
+
+• M. Shadkhah, C. H. Yang, S. Karki, and B. Ganapathysubramanian. Octree-Based Shifted Boundary
+Method: Evaluating the Impact of Hanging-Node Removal on Convergence and Solver Performance for
+Linear PDEs. Advances in Computational Science and Engineering, Vol. 4, pp. 119–141, 2025.
+
+• R. Tali, A. Rabeh, C. H. Yang, M. Shadkhah, S. Karki, A. Upadhyaya, S. Dhakshinamoorthy, M. Saadati,
+S. Sarkar, A. Krishnamurthy, C. Hegde, A. Balu, and B. Ganapathysubramanian. FlowBench: A Large-
+Scale Benchmark for Flow Simulation over Complex Geometries. Data-centric Machine Learning
+Research (DMLR), 2025.
+
+• S. Karki, S. Satyal, K. P. Rijal, P. Koirala, and N. Adhikari. Comparative CFD Analysis of Kali-Gandaki
+“A” Francis Runner with Runner Generated from the Bovet Method. IOP Conference Series: Earth
+and Environmental Science, Vol. 1037, No. 1, Art. 012007, 2022.
+
+Manuscripts in Preparation
+
+• S. Karki, A. Krishnamurthy, and B. Ganapathysubramanian. Stable One-Shot Editing of Implicit Neural
+
+Representations via Gram Eigenmodes. Manuscript in preparation.
+
+• S. Karki, A. Krishnamurthy, and B. Ganapathysubramanian. Learning Geometry for PDEs: Linking
+
+Neural SDF Error to Solution Accuracy. Manuscript in preparation.
+
+• S. Karki, A. Krishnamurthy, and B. Ganapathysubramanian. Hybrid Mesh for Octrees for Linear PDEs.
+
+Manuscript in preparation.
+
+1
+
+Research Experience
+
+Aug 2023 – Present
+Graduate Research Assistant, CompM Lab, Iowa State University
+• Developing neural-field geometry solvers coupling INR, octree FEM, and shifted-boundary methods
+
+(C++/MPI/CUDA).
+
+• Built FlowBench: an HPC-scale dataset with PyTorch/ONNX pipelines for large-scale PDE learning.
+
+• Refactoring MPI-parallel solver to CUDA; achieved near-linear scaling across GPU nodes.
+
+• Investigating real-time INR editing and shape diffusion models for 3D generative design and sim-
+
+ulation.
+
+Skills
+
+Python, C/C++, CUDA, MPI, PETSc, PyTorch, ONNX, Rust, HPC;
+Neural Fields (INR/SDF), Differentiable Simulation, FEM/SBM, Octrees, 3D Geometry AI
+
+Education
+
+Iowa State University — PhD, Mechanical Engineering (GPA 4.0)
+Focus: AI-native geometry, neural simulation, GPU-scale PDE solvers
+Tribhuvan University (IOE) — B.E., Mechanical Engineering (Gold Medal)
+
+Expected 2027
+
+2022
+
+Additional Experience
+
+AI Fellow, FuseMachine
+Built predictive maintenance ML pipeline (XGBoost) and GPT-2-based sentiment API via FastAPI.
+Computational Engineer / Co-Founder, Zebec & Mokshya
+Developed correctness-critical blockchain and financial analytics backends (Rust/TypeScript).
+
+Nov 2021 – Aug 2023
+
+Jan 2023 – Aug 2023
+
+Instruction
+
+MLOps (Machine Learning Operations), TRAC, Iowa State University
+
+Aug 2024 – Dec 2024
+
+2
