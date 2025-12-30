@@ -2,32 +2,17 @@ import React from "react";
 
 const AchievementDisplay = ({ achievement }) => {
   return (
-    <div>
-      <h2>{achievement.title}</h2>
-      {achievement.category ? (
-        <div className="pt-2 pb-3">{achievement.category}</div>
-      ) : (
-        ""
-      )}
-
-      {achievement.description ? (
-        <div className="pt-2 pb-3">{achievement.description}</div>
-      ) : (
-        ""
-      )}
-
+    <div className="card">
+      <h3>{achievement.title}</h3>
+      {achievement.category ? <p>{achievement.category}</p> : null}
+      {achievement.description ? <p>{achievement.description}</p> : null}
       {achievement.github_link ? (
-        <a
-          href={achievement.github_link}
-          className="btn btn-primary mr3"
-          target="_blank"
-        >
-          Github Repository
-        </a>
-      ) : (
-        ""
-      )}
-      <hr />
+        <div className="inline-links">
+          <a className="inline-link" href={achievement.github_link} target="_blank" rel="noreferrer">
+            GitHub Repository
+          </a>
+        </div>
+      ) : null}
     </div>
   );
 };

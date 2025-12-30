@@ -6,110 +6,141 @@ import li from "../assets/social_media/li.png";
 import tw from "../assets/social_media/tw.png";
 import mail from "../assets/social_media/mail.png";
 
-function about() {
+const About = () => {
   return (
-    <section class="pt-4">
-      <div class="container">
-        <div class="row">
-          <div
-            className="col-md-12 text-center"
-            style={{ paddingTop: "8.5rem" }}
-          >
-            <div>
-              <span className="greeting">Hello, </span>
-              <span className="greeting" style={{ color: "#9B4819" }}>
-                I am Samundra Karki
-              </span>
-            </div>
-            <div>
-              <span className="greeting-designation">
-                Graduate Student at Iowa State University
-              </span>
-            </div>
-
-            <div className="d-flex justify-content-center pt-4">
-              <a
-                href="mailto:samundrakarki56@@gmail.com"
-                target="_blank"
-                className="mr3 socialMediaLink"
-              >
-                <img src={mail} className="social-media"></img>
+    <main className="page">
+      <div className="container-narrow">
+        <section className="hero">
+          <div>
+            <div className="eyebrow">PhD Researcher</div>
+            <h1>Samundra Karki</h1>
+            <p className="lead">
+              PhD researcher in AI-native geometry and physics-based simulation
+              at Iowa State University.
+            </p>
+            <p className="section-subtitle" style={{ marginBottom: "1.5rem" }}>
+              Ames, IA · (+1) 515-735-6896 · samundra@iastate.edu
+            </p>
+            <div className="hero-actions">
+              <a className="button-primary" href={cv} target="_blank" rel="noreferrer">
+                Download CV
               </a>
               <a
-                href="https://github.com/newton-raphson"
-                target="_blank"
-                className="mr3 socialMediaLink"
+                className="button-ghost"
+                href="mailto:samundra@iastate.edu"
               >
-
-                <img src={gh} className="social-media"></img>
+                Contact
+              </a>
+            </div>
+            <div className="social-strip">
+              <a href="mailto:samundra@iastate.edu" target="_blank" rel="noreferrer">
+                <img src={mail} alt="Email" />
+              </a>
+              <a href="https://github.com/newton-raphson" target="_blank" rel="noreferrer">
+                <img src={gh} alt="GitHub" />
               </a>
               <a
                 href="https://www.linkedin.com/in/samundra-karki-1aa8ab176/"
                 target="_blank"
-                className="mr3 socialMediaLink"
+                rel="noreferrer"
               >
-                <img src={li} className="social-media"></img>
+                <img src={li} alt="LinkedIn" />
               </a>
-              <a
-                href="https://twitter.com/0xSamstine"
-                target="_blank"
-                className="mr3 socialMediaLink"
-              >
-                <img src={tw} className="social-media"></img>
-              </a>
-            </div>
-
-            <div className="pt-4">
-              <a
-                href={cv}
-                target="_blank"
-                className="btn btn-outline-dark btn-rounded button"
-              >
-                Download CV
+              <a href="https://twitter.com/0xSamstine" target="_blank" rel="noreferrer">
+                <img src={tw} alt="Twitter" />
               </a>
             </div>
           </div>
-        </div>
+          <div className="hero-media">
+            <img src={portfolioImage} alt="Portrait of Samundra Karki" />
+          </div>
+        </section>
+
+        <section className="section">
+          <h2 className="section-title">Profile</h2>
+          <p className="section-subtitle">
+            My work bridges 3D geometry understanding, neural fields, and scalable
+            physics engines. I build INR-based geometry, octree FEM, and
+            shifted-boundary solvers that enable differentiable, GPU-native
+            simulation directly on implicit or generative 3D assets. I am
+            exploring fast INR editing, geometry-aware AI, and GPU-accelerated
+            physics for immersive systems.
+          </p>
+          <div className="card-grid">
+            <div className="card">
+              <h3>Research Interests</h3>
+              <ul>
+                <li>Neural 3D geometry: INR/SDF, generative editing, implicit shape reasoning</li>
+                <li>Real-time physics: octree FEM, immersed methods, differentiable simulation</li>
+                <li>Large-scale distributed AI systems and GPU-native PDE solvers</li>
+              </ul>
+            </div>
+            <div className="card">
+              <h3>Education</h3>
+              <p>
+                Iowa State University — PhD, Mechanical Engineering (GPA 4.0)
+                <br />
+                Focus: AI-native geometry, neural simulation, GPU-scale PDE solvers
+                <br />
+                Expected 2027
+              </p>
+              <p>
+                Tribhuvan University (IOE) — B.E., Mechanical Engineering (Gold Medal)
+                <br />
+                2022
+              </p>
+            </div>
+            <div className="card">
+              <h3>Selected Publications</h3>
+              <ul>
+                <li>
+                  S. Karki et al. Direct Flow Simulations with Implicit Neural
+                  Representations of Complex Geometry. Computer Methods in Applied
+                  Mechanics and Engineering, 2025.
+                </li>
+                <li>
+                  S. Karki et al. Mechanics Simulations Using Implicit Neural
+                  Representations of Complex Geometries. Computer-Aided Design, 2025.
+                </li>
+                <li>
+                  M. Shadkhah et al. Octree-Based Shifted Boundary Method. Advances in
+                  Computational Science and Engineering, 2025.
+                </li>
+                <li>
+                  R. Tali et al. FlowBench: A Large-Scale Benchmark for Flow Simulation
+                  over Complex Geometries. DMLR, 2025.
+                </li>
+                <li>
+                  S. Karki et al. Comparative CFD Analysis of Kali-Gandaki "A"
+                  Francis Runner. IOP Conference Series: Earth and Environmental Science, 2022.
+                </li>
+              </ul>
+            </div>
+            <div className="card">
+              <h3>Manuscripts in Preparation</h3>
+              <ul>
+                <li>
+                  Stable One-Shot Editing of Implicit Neural Representations via Gram
+                  Eigenmodes.
+                </li>
+                <li>Learning Geometry for PDEs: Linking Neural SDF Error to Solution Accuracy.</li>
+                <li>Hybrid Mesh for Octrees for Linear PDEs.</li>
+              </ul>
+            </div>
+            <div className="card">
+              <h3>Skills</h3>
+              <p>
+                Python, C/C++, CUDA, MPI, PETSc, PyTorch, ONNX, Rust, HPC
+              </p>
+              <p>
+                Neural Fields (INR/SDF), Differentiable Simulation, FEM/SBM, Octrees, 3D Geometry AI
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
-
-      {/* About Me */}
-      <div className="container aboutme">
-        <div className="row">
-          <div className="col-md-12 text-center pb-4">
-            <h1 className="greeting" style={{ color: "#9B4812" }}>
-              About Me
-            </h1>
-          </div>
-          <div className="col-md-9">
-            <p class="text-justify">
-              I am a research graduate student at Iowa State University with focus in 
-              Geometric Deep Learning with focus in compact representation of 3D geometries for 
-              computational analysis.
-            </p>
-            <p>
-              Before joining Iowa State University, I worked as a Co-founder and Computational Analytics and 
-              Smart Contract Engineer for open source contributing startup <a href="https://mokshya.io" target="_blank">Mokshya</a> . I have also worked as a Computational Analytics 
-              and Smart Contract Engineer for a startup called <a href="https://zebec.io" target="_blank">Zebec</a> utilizing my data analytics, machine learning and blockchain skills.
-            </p>
-          </div>
-
-          <div className="col-md-3">
-            <div className="circular-image-container">
-              <img
-                src={portfolioImage}
-                alt="Portfolio image"
-                width={300}
-                height={300}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-        
-        {/* Skills */}
-    </section>
-    
+    </main>
   );
-}
+};
 
-export default about;
+export default About;

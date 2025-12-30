@@ -1,34 +1,43 @@
-import React from 'react'
+import React from "react";
 
-const ProjectDisplay = ({ heading,project }) => {
-    const displaykeywords = (keywords) => {
-        let result = [];
+const ProjectDisplay = ({ project }) => {
+  const displayKeywords = (keywords) => {
+    return keywords.map((keyword) => (
+      <span className="tag" key={`${project.title}-${keyword}`}>
+        {keyword}
+      </span>
+    ));
+  };
 
-        for (let i = 0; i < keywords.length; i++) {
-            result.push(
-                <span className='bg-info text-dark mr3 p-1' style={{borderRadius: "10px"}}>{keywords[i]}</span>
-            )
-        }
-        return result;
-    }
+  return (
+    <div className="card">
+      <h3>{project.title}</h3>
+      <div className="tag-list">{displayKeywords(project.keywords)}</div>
+      {project.description ? <p>{project.description}</p> : null}
+      <div className="inline-links">
+        {project.github_link ? (
+          <a
+            className="inline-link"
+            href={project.github_link}
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub Repository
+          </a>
+        ) : null}
+        {project.document_link ? (
+          <a
+            className="inline-link"
+            href={project.document_link}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Project Report
+          </a>
+        ) : null}
+      </div>
+    </div>
+  );
+};
 
-    return (
-        <div>
-            <h2>{heading}</h2>
-            <h3>{project.title}</h3>
-            <div className='pb-3'>
-                <span className='font-weight-bold'>Keywords : </span>
-                {displaykeywords(project.keywords)}
-            </div>
-            {project.description ? <div className='pt-2 pb-3'>
-                {project.description}
-            </div> : ""}
-            
-            {project.github_link ? <a href={project.github_link} className="btn btn-primary mr3" target="_blank">Github Repository</a> : ""}
-            {project.document_link ? <a href={project.document_link} className="btn btn-success" target="_blank">Project Report</a> : ""}
-            <hr />
-        </div>
-    )
-}
-
-export default ProjectDisplay
+export default ProjectDisplay;
