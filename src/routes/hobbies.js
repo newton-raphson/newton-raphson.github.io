@@ -96,89 +96,97 @@ const Hobbies = () => {
 
   return (
     <main className="page">
-      <div className="container-narrow">
-        <section className="section">
-          <div className="card-grid">
-            <div className="card">
-              <h3>{flatPhotos[activeIndex]?.place}</h3>
-              <div
-                className="photo-carousel"
-                onMouseEnter={() => setIsPaused(true)}
-                onMouseLeave={() => setIsPaused(false)}
-              >
-                <button
-                  type="button"
-                  className="carousel-button"
-                  onClick={() => handleSlide(-1)}
-                  aria-label="Previous photo"
+      <div className="container-wide">
+        <section className="content">
+          <article className="content-card">
+            <h2>Hobbies</h2>
+            <p className="section-subtitle">
+              Places, writing, and creative energy outside the lab.
+            </p>
+          </article>
+          <article className="content-card">
+            <div className="card-grid">
+              <div className="card">
+                <h3>{flatPhotos[activeIndex]?.place}</h3>
+                <div
+                  className="photo-carousel"
+                  onMouseEnter={() => setIsPaused(true)}
+                  onMouseLeave={() => setIsPaused(false)}
                 >
-                  ‹
-                </button>
-                <div className="carousel-viewport">
-                  <div
-                    className="carousel-track"
-                    style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+                  <button
+                    type="button"
+                    className="carousel-button"
+                    onClick={() => handleSlide(-1)}
+                    aria-label="Previous photo"
                   >
-                    {flatPhotos.map((photo) => (
-                      <div className="carousel-slide" key={photo.src}>
-                        <img src={photo.src} alt={photo.alt} loading="lazy" />
-                      </div>
-                    ))}
+                    ‹
+                  </button>
+                  <div className="carousel-viewport">
+                    <div
+                      className="carousel-track"
+                      style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+                    >
+                      {flatPhotos.map((photo) => (
+                        <div className="carousel-slide" key={photo.src}>
+                          <img src={photo.src} alt={photo.alt} loading="lazy" />
+                        </div>
+                      ))}
+                    </div>
                   </div>
+                  <button
+                    type="button"
+                    className="carousel-button"
+                    onClick={() => handleSlide(1)}
+                    aria-label="Next photo"
+                  >
+                    ›
+                  </button>
                 </div>
-                <button
-                  type="button"
-                  className="carousel-button"
-                  onClick={() => handleSlide(1)}
-                  aria-label="Next photo"
-                >
-                  ›
-                </button>
               </div>
             </div>
-          </div>
-        </section>
-        <section className="section">
-          <h2 className="section-title">Writing</h2>
-          <div className="card-grid">
-            <div className="card">
-              <h3>Socio-Political Writer (Nepali)</h3>
-              <p>
-                समुन्द्र कार्की हाल अमेरिकाको Iowa State University मा विद्यावारिधि
-                (PhD) अध्ययनरत छन्। उनी कृत्रिम बुद्धिमत्ता (AI), एल्गोरिद्म, प्रविधि
-                र समाजबीचको अन्तरसम्बन्ध, तथा प्रविधिले मानव निर्णय, चेतना र राजनीतिक
-                संरचनामा पार्ने प्रभावबारे अध्ययन र लेखन गर्छन्। समसामयिक सामाजिक,
-                दार्शनिक र राजनीतिक प्रश्नहरूमा उनको लेखन प्रविधि–केन्द्रित युगमा
-                विचार र लोकतन्त्रको भविष्यतर्फ केन्द्रित छ।
-              </p>
-              <div className="inline-links">
-                <a
-                  className="inline-link"
-                  href="https://www.nayapatrikadaily.com/news-details/162337/2025-03-11"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Featured article
-                </a>
-              </div>
-            </div>
-            <div className="card">
-              <h3>Selected posts</h3>
-              <div className="inline-links" style={{ flexDirection: "column", gap: "0.5rem" }}>
-                {writingLinks.map((item) => (
+          </article>
+          <article className="content-card">
+            <h3>Writing</h3>
+            <div className="card-grid">
+              <div className="card">
+                <h4>Socio-Political Writer (Nepali)</h4>
+                <p>
+                  समुन्द्र कार्की हाल अमेरिकाको Iowa State University मा विद्यावारिधि
+                  (PhD) अध्ययनरत छन्। उनी कृत्रिम बुद्धिमत्ता (AI), एल्गोरिद्म, प्रविधि
+                  र समाजबीचको अन्तरसम्बन्ध, तथा प्रविधिले मानव निर्णय, चेतना र राजनीतिक
+                  संरचनामा पार्ने प्रभावबारे अध्ययन र लेखन गर्छन्। समसामयिक सामाजिक,
+                  दार्शनिक र राजनीतिक प्रश्नहरूमा उनको लेखन प्रविधि–केन्द्रित युगमा
+                  विचार र लोकतन्त्रको भविष्यतर्फ केन्द्रित छ।
+                </p>
+                <div className="inline-links">
                   <a
                     className="inline-link"
-                    href={item.link}
+                    href="https://www.nayapatrikadaily.com/news-details/162337/2025-03-11"
                     target="_blank"
                     rel="noreferrer"
-                    key={item.title}
                   >
-                    {item.title}
+                    Featured article
                   </a>
-                ))}
+                </div>
+              </div>
+              <div className="card">
+                <h4>Selected posts</h4>
+                <div className="inline-links" style={{ flexDirection: "column", gap: "0.5rem" }}>
+                  {writingLinks.map((item) => (
+                    <a
+                      className="inline-link"
+                      href={item.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      key={item.title}
+                    >
+                      {item.title}
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
+          </article>
         </section>
       </div>
     </main>

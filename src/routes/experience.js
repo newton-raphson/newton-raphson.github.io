@@ -43,18 +43,22 @@ const Experience = () => {
 
   return (
     <main className="page">
-      <div className="container-narrow">
-        <section className="section">
-          <h2 className="section-title">Experience</h2>
-          <p className="section-subtitle">
-            Research, industry, and teaching roles centered on AI-native geometry, scalable simulation,
-            and applied machine learning systems.
-          </p>
-          <div className="card-grid">
-            {reviewList.map((review) => (
-              <ExperienceDisplay review={review} key={review.title} />
-            ))}
-          </div>
+      <div className="container-wide">
+        <section className="content">
+          <article className="content-card">
+            <h2>Experience</h2>
+            <p className="section-subtitle">
+              Research, industry, and teaching roles centered on AI-native geometry, scalable simulation,
+              and applied machine learning systems.
+            </p>
+          </article>
+          <article className="content-card">
+            <div className="card-grid">
+              {reviewList.map((review) => (
+                <ExperienceDisplay review={review} key={review.title} />
+              ))}
+            </div>
+          </article>
         </section>
       </div>
     </main>

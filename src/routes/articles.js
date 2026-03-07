@@ -26,25 +26,29 @@ const Articles = () => {
 
   return (
     <main className="page">
-      <div className="container-narrow">
-        <section className="section">
-          <h2 className="section-title">Blogs</h2>
-          <p className="section-subtitle">
-            Writing and highlights across research and applied systems.
-          </p>
-          <div className="card-grid">
-            {articles.map((article) => (
-              <div className="card" key={article.title}>
-                <h3>{article.title}</h3>
-                <p>{article.source}</p>
-                <div className="inline-links">
-                  <a className="inline-link" href={article.link} target="_blank" rel="noreferrer">
-                    Read Article
-                  </a>
+      <div className="container-wide">
+        <section className="content">
+          <article className="content-card">
+            <h2>Blogs</h2>
+            <p className="section-subtitle">
+              Writing and highlights across research and applied systems.
+            </p>
+          </article>
+          <article className="content-card">
+            <div className="card-grid">
+              {articles.map((article) => (
+                <div className="card" key={article.title}>
+                  <h3>{article.title}</h3>
+                  <p>{article.source}</p>
+                  <div className="inline-links">
+                    <a className="inline-link" href={article.link} target="_blank" rel="noreferrer">
+                      Read Article
+                    </a>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </article>
         </section>
       </div>
     </main>

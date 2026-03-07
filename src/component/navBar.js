@@ -29,6 +29,14 @@ const Navbar = () => {
               className={({ isActive }) =>
                 isActive ? "nav-link is-active" : "nav-link"
               }
+              to="/publications"
+            >
+              Publications
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "nav-link is-active" : "nav-link"
+              }
               to="/lr"
             >
               Experience
