@@ -1,67 +1,10 @@
-import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+import cv from "../assets/cv/resume.pdf";
 
-const Navbar = () => {
-  return (
-    <nav className="navbar-custom">
-      <div className="nav-inner">
-        <NavLink className="brand" to="/">
-          Samundra Karki
-        </NavLink>
-        <div className="nav-links">
-          <div className="nav-links-box">
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? "nav-link is-active" : "nav-link"
-              }
-              to="/"
-            >
-              About
-            </NavLink>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? "nav-link is-active" : "nav-link"
-              }
-              to="/projects"
-            >
-              Projects
-            </NavLink>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? "nav-link is-active" : "nav-link"
-              }
-              to="/publications"
-            >
-              Publications
-            </NavLink>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? "nav-link is-active" : "nav-link"
-              }
-              to="/lr"
-            >
-              Experience
-            </NavLink>
-          </div>
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? "nav-link nav-link-fun is-active" : "nav-link nav-link-fun"
-            }
-            to="/articles"
-          >
-            Blogs
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? "nav-link nav-link-fun is-active" : "nav-link nav-link-fun"
-            }
-            to="/hobbies"
-          >
-            Hobbies
-          </NavLink>
-        </div>
-      </div>
-    </nav>
-  );
-};
-
-export default Navbar;
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
+  const links = [["/", "About"], ["/publications", "Publications"], ["/projects", "Projects"], ["/experience", "Experience"], ["/articles", "Writing"], ["/hobbies", "Beyond research"]];
+  return <header className="navbar-custom"><nav className="nav-inner container-wide" aria-label="Main navigation"><NavLink to="/" className="brand" onClick={() => setOpen(false)}><span className="brand-mark">sk<span>.</span></span><span>Samundra Karki</span></NavLink><button className="menu-toggle" aria-expanded={open} aria-controls="main-navigation" onClick={() => setOpen(!open)}>{open ? "Close −" : "Menu +"}</button><div id="main-navigation" className={`nav-links ${open ? "is-open" : ""}`}>{links.map(([to, label]) => <NavLink key={to} to={to} onClick={() => setOpen(false)} className={({ isActive }) => `nav-link ${isActive || (to === "/experience" && pathname === "/lr") ? "is-active" : ""}`}>{label}</NavLink>)}<a className="nav-resume" href={cv} target="_blank" rel="noreferrer">Academic CV ↗</a></div></nav></header>;
+}

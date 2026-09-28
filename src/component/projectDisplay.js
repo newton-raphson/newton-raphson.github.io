@@ -25,6 +25,7 @@ const ProjectDisplay = ({ project }) => {
             GitHub Repository
           </a>
         ) : null}
+        {project.project_link && <a className="inline-link" href={project.project_link} target="_blank" rel="noreferrer">Project website</a>}
         {project.document_link ? (
           <a
             className="inline-link"
@@ -32,7 +33,7 @@ const ProjectDisplay = ({ project }) => {
             target="_blank"
             rel="noreferrer"
           >
-            Project Report
+            Read paper
           </a>
         ) : null}
       </div>

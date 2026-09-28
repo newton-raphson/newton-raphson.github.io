@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useState } from "react";
 import japanCity from "../assets/Hobbies/Places/Japan/image.png";
 import japanNight from "../assets/Hobbies/Places/Japan/image copy.png";
 import vancouverHarbor from "../assets/Hobbies/Places/Vancouver/73B0A8BB-E7A2-413F-81D5-D77527FBDAB5_1_105_c.jpeg";
@@ -6,7 +6,7 @@ import vancouverSunset from "../assets/Hobbies/Places/Vancouver/41C822B9-D3EE-45
 
 const Hobbies = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
+
   const writingLinks = [
     {
       title: "IDIOTS RECOMMENDATION  FOR LOCK DOWN",
@@ -71,35 +71,19 @@ const Hobbies = () => {
     },
   ];
 
-  const flatPhotos = useMemo(() => {
-    return places.flatMap((place) =>
-      place.photos.map((photo) => ({ ...photo, place: place.name }))
-    );
-  }, [places]);
-
+  const flatPhotos = places.flatMap((place) =>
+    place.photos.map((photo) => ({ ...photo, place: place.name }))
+  );
   const handleSlide = (direction) => {
     setActiveIndex((prev) => (prev + direction + flatPhotos.length) % flatPhotos.length);
   };
 
-  useEffect(() => {
-    if (flatPhotos.length === 0) {
-      return undefined;
-    }
-    if (isPaused) {
-      return undefined;
-    }
-    const timer = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % flatPhotos.length);
-    }, 6000);
-    return () => clearInterval(timer);
-  }, [flatPhotos.length, isPaused]);
-
   return (
-    <main className="page">
+    <main id="main-content" className="page">
       <div className="container-wide">
         <section className="content">
           <article className="content-card">
-            <h2>Hobbies</h2>
+            <h1>Hobbies</h1>
             <p className="section-subtitle">
               Places, writing, and creative energy outside the lab.
             </p>
@@ -110,8 +94,6 @@ const Hobbies = () => {
                 <h3>{flatPhotos[activeIndex]?.place}</h3>
                 <div
                   className="photo-carousel"
-                  onMouseEnter={() => setIsPaused(true)}
-                  onMouseLeave={() => setIsPaused(false)}
                 >
                   <button
                     type="button"

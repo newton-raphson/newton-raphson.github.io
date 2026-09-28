@@ -1,7 +1,1 @@
-body {
-  margin: 0;
-}
-
-code {
-  font-family: 'Work Sans', sans-serif;
-}
+code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }

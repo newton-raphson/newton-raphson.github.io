@@ -20,7 +20,10 @@ const ExperienceDisplay = ({ review }) => {
         </p>
       ) : null}
       <div className="tag-list">{displayKeywords(review.tag)}</div>
-      <p>{review.description}</p>
+      {review.description && <p>{review.description}</p>}
+      {review.highlights && <ul className="experience-highlights">
+        {review.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
+      </ul>}
       {review.original_link ? (
         <div className="inline-links">
           <a className="inline-link" href={review.original_link} target="_blank" rel="noreferrer">

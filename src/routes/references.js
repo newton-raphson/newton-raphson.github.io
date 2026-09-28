@@ -1,34 +1,9 @@
 import React from "react";
+import { publications } from "../data/publications";
 
 const References = () => {
   const references = [
-    {
-      title: "Neural Geometry for PDEs: Regularity, Stability, and Convergence Guarantees",
-      authors: "S. Karki, A. Krishnamurthy, B. Ganapathysubramanian.",
-      citation: "ICLR AI&PDE Workshop, 2026.",
-    },
-    {
-      title: "Direct Flow Simulations with Implicit Neural Representations of Complex Geometry",
-      authors:
-        "S. Karki, M. Shadkhah, C. H. Yang, A. Balu, G. Scovazzi, A. Krishnamurthy, B. Ganapathysubramanian.",
-      citation: "Computer Methods in Applied Mechanics and Engineering, Vol. 446, 118248, 2025.",
-    },
-    {
-      title: "Mechanics Simulations Using Implicit Neural Representations of Complex Geometries",
-      authors: "S. Karki, M. C. Hsu, A. Krishnamurthy, B. Ganapathysubramanian.",
-      citation: "Computer-Aided Design, Vol. 177, 103978, 2025.",
-    },
-    {
-      title:
-        "Octree-Based Shifted Boundary Method: Evaluating the Impact of Hanging-Node Removal on Convergence",
-      authors: "M. Shadkhah, C. H. Yang, S. Karki, B. Ganapathysubramanian.",
-      citation: "Advances in Computational Science and Engineering, Vol. 4, pp. 119-141, 2025.",
-    },
-    {
-      title: "FlowBench: A Large-Scale Benchmark for Flow Simulation over Complex Geometries",
-      authors: "R. Tali, ..., S. Karki, ... et al..",
-      citation: "Proceedings of Data-centric Machine Learning Research (DMLR), Vol. 1, 2025.",
-    },
+    ...publications.map((paper) => ({ ...paper, authors: `${paper.authors.join(", ")}.` })),
     {
       title: "Optimal surrogate boundary selection and scalability studies for the shifted boundary method on octree meshes",
       authors:
@@ -58,11 +33,11 @@ const References = () => {
   ];
 
   return (
-    <main className="page">
+    <main id="main-content" className="page">
       <div className="container-wide">
         <section className="content publications-content">
           <article className="content-card">
-            <h2>Reference</h2>
+            <h1>Reference</h1>
             <ol>
               {references.map((paper) => (
                 <li key={paper.title}>

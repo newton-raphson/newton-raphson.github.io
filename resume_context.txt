@@ -1,109 +1,82 @@
-SAMUNDRA KARKI
-(+1) 515-735-6896 | samundra@iastate.edu | Ames, IA
-GitHub: newton-raphson | LinkedIn
-
-Profile
-
-PhD researcher in AI-native geometry and physics-based simulation at Iowa State University (advisor: B.
-Ganapathysubramanian). My work bridges 3D geometry understanding, neural fields, and scal-
-able physics engines. I build INR-based geometry, octree FEM, and shifted-boundary solvers that enable
-differentiable, GPU-native simulation directly on implicit or generative 3D assets—advancing the next gen-
-eration of real-time digital worlds.
-I am now exploring fast INR editing, geometry-aware AI, and
-GPU-accelerated physics for immersive systems.
-
-Research Interests
-
-• Neural 3D geometry: INR/SDF, generative editing, implicit shape reasoning
-
-• Real-time physics: octree FEM, immersed methods, differentiable simulation
-
-• Large-scale distributed AI systems and GPU-native PDE solvers
-
-Selected Publications
-
-• S. Karki, M. Shadkhah, C. H. Yang, A. Balu, G. Scovazzi, and A. Krishnamurthy. Direct Flow Simu-
-lations with Implicit Neural Representations of Complex Geometry. Computer Methods in Applied
-Mechanics and Engineering, Vol. 446, Art. 118248, 2025.
-
-• S. Karki, M. C. Hsu, A. Krishnamurthy, and B. Ganapathysubramanian. Mechanics Simulations Using
-Implicit Neural Representations of Complex Geometries. Computer-Aided Design, Art. 103978, 2025.
-
-• M. Shadkhah, C. H. Yang, S. Karki, and B. Ganapathysubramanian. Octree-Based Shifted Boundary
-Method: Evaluating the Impact of Hanging-Node Removal on Convergence and Solver Performance for
-Linear PDEs. Advances in Computational Science and Engineering, Vol. 4, pp. 119–141, 2025.
-
-• R. Tali, A. Rabeh, C. H. Yang, M. Shadkhah, S. Karki, A. Upadhyaya, S. Dhakshinamoorthy, M. Saadati,
-S. Sarkar, A. Krishnamurthy, C. Hegde, A. Balu, and B. Ganapathysubramanian. FlowBench: A Large-
-Scale Benchmark for Flow Simulation over Complex Geometries. Data-centric Machine Learning
-Research (DMLR), 2025.
-
-• S. Karki, S. Satyal, K. P. Rijal, P. Koirala, and N. Adhikari. Comparative CFD Analysis of Kali-Gandaki
-“A” Francis Runner with Runner Generated from the Bovet Method. IOP Conference Series: Earth
-and Environmental Science, Vol. 1037, No. 1, Art. 012007, 2022.
-
-Manuscripts in Preparation
-
-• S. Karki, A. Krishnamurthy, and B. Ganapathysubramanian. Stable One-Shot Editing of Implicit Neural
-
-Representations via Gram Eigenmodes. Manuscript in preparation.
-
-• S. Karki, A. Krishnamurthy, and B. Ganapathysubramanian. Learning Geometry for PDEs: Linking
-
-Neural SDF Error to Solution Accuracy. Manuscript in preparation.
-
-• S. Karki, A. Krishnamurthy, and B. Ganapathysubramanian. Hybrid Mesh for Octrees for Linear PDEs.
-
-Manuscript in preparation.
-
-1
-
-Research Experience
-
-Aug 2023 – Present
-Graduate Research Assistant, CompM Lab, Iowa State University
-• Developing neural-field geometry solvers coupling INR, octree FEM, and shifted-boundary methods
-
-(C++/MPI/CUDA).
-
-• Built FlowBench: an HPC-scale dataset with PyTorch/ONNX pipelines for large-scale PDE learning.
-
-• Refactoring MPI-parallel solver to CUDA; achieved near-linear scaling across GPU nodes.
-
-• Investigating real-time INR editing and shape diffusion models for 3D generative design and sim-
-
-ulation.
-
-Skills
-
-Python, C/C++, CUDA, MPI, PETSc, PyTorch, ONNX, Rust, HPC;
-Neural Fields (INR/SDF), Differentiable Simulation, FEM/SBM, Octrees, 3D Geometry AI
-
+Samundra Karki
+Scientific Machine Learning· Computational Mechanics· Uncertainty Quantification
+Ames, IA | samundra@iastate.edu | Website | GitHub | Google Scholar | ORCID
+Ph.D. candidate connecting learned geometry with reliable physics simulation. Research spans simulation directly
+on neural signed-distance fields, a priori error analysis for neural geometry in PDEs, closed-form neural-geometry
+editing, geometry uncertainty propagation, and multi-physics inverse design.
 Education
-
-Iowa State University — PhD, Mechanical Engineering (GPA 4.0)
-Focus: AI-native geometry, neural simulation, GPU-scale PDE solvers
-Tribhuvan University (IOE) — B.E., Mechanical Engineering (Gold Medal)
-
-Expected 2027
-
-2022
-
-Additional Experience
-
-AI Fellow, FuseMachine
-Built predictive maintenance ML pipeline (XGBoost) and GPT-2-based sentiment API via FastAPI.
-Computational Engineer / Co-Founder, Zebec & Mokshya
-Developed correctness-critical blockchain and financial analytics backends (Rust/TypeScript).
-
-Nov 2021 – Aug 2023
-
-Jan 2023 – Aug 2023
-
-Instruction
-
-MLOps (Machine Learning Operations), TRAC, Iowa State University
-
-Aug 2024 – Dec 2024
-
-2
+Ph.D., Mechanical Engineering, Iowa State University GPA: 4.0/4.0 | Advisor: Prof. Baskar Ganapathysubramanian
+B.E., Mechanical Engineering, Tribhuvan University Institute of Engineering, Pulchowk Campus, Nepal
+University Gold Medal: top graduate across all engineering campuses.
+Peer-Reviewed Publications
+Expected Fall 2026
+May 2022
+[1] S. Karki, M.-C. Hsu, A. Krishnamurthy, and B. Ganapathysubramanian. “Mechanics simulation with Implicit
+Neural Representations of complex geometries.” Computer-Aided Design, 190:103978, 2026.
+doi:10.1016/j.cad.2025.103978.
+[2] S. Karki, M. Shadkhah, C.-H. Yang, A. Balu, G. Scovazzi, A. Krishnamurthy, and B. Ganapathysubramanian.
+“Direct flow simulations with implicit neural representation of complex geometry.” Computer Methods in Applied
+Mechanics and Engineering, 446:118248, 2025. doi:10.1016/j.cma.2025.118248.
+[3] R. Tali, A. Rabeh, C.-H. Yang, M. Shadkhah, S. Karki, A. Upadhyaya, S. Dhakshinamoorthy, M. Saadati, S. Sarkar,
+A. Krishnamurthy, C. Hegde, A. Balu, and B. Ganapathysubramanian. “FlowBench: A Large Scale Benchmark
+for Flow Simulation over Complex Geometries.” Data-centric Machine Learning Research, 2(14):1–35, 2025.
+Publisher full text.
+[4] M. Shadkhah, C.-H. Yang, S. Karki, and B. Ganapathysubramanian. “Octree-Based Shifted Boundary Method:
+Evaluating the impact of hanging-node removal on convergence and solver performance for linear PDEs.” Ad-
+vances in Computational Science and Engineering, 4:119–141, 2025. doi:10.3934/acse.2025014.
+[5] S. Karki, S. Satyal, K. P. Rijal, P. Koirala, and N. Adhikari. “Comparative CFD analysis of Kali-Gandaki ‘A’ Francis
+runner with runner generated from Bovet method.” IOP Conference Series: Earth and Environmental Science,
+1037(1):012007, 2022 (3rd IAHR-Asia Symposium on Hydraulic Machinery and Systems). doi:10.1088/1755-
+1315/1037/1/012007.
+[6] S. Karki, A. Krishnamurthy, and B. Ganapathysubramanian. “Neural Geometry for PDEs: Regularity, Stability,
+and Convergence Guarantees.” ICLR 2026 Workshop on AI and Partial Differential Equations (AI&PDE), poster,
+2026. arXiv:2602.02271.
+Submitted Manuscripts and Preprints
+[7] S. Karki, A. Krishnamurthy, and B. Ganapathysubramanian. “Propagating Geometry Uncertainty from a Single
+Implicit Neural Representation through a Differentiable PDE Solver.” Submitted to ICLR 2027.
+[8] S. Karki, A. Krishnamurthy, and B. Ganapathysubramanian. “GENIE: Gram-Eigenmode INR Editing with Closed-
+Form Geometry Updates.” Preprint, 2026. arXiv:2603.29860.
+Manuscripts in Preparation
+[9] S. Karki, A. Biswas, N. Masud, M. H. H. Hasib, A. Sarkar, and B. Ganapathysubramanian. “From Sparse AFM
+Observations to Probabilistic Macroscale Mechanics: A Generative-Physics Framework for Plant Cell Walls.” In
+preparation.
+[10] S. Karki. “Suppression Is Not Sufficiency: Separating Behavioral Control from Reconstruction in Fine-Tuned
+Transformers.” In preparation.
+Samundra Karki 1
+Research and Engineering Experience
+Graduate Research Assistant Aug. 2023 – Present
+Iowa State University | Advisor: Prof. Baskar Ganapathysubramanian
+• Developed shifted-boundary finite-element simulation on adaptive octree meshes that queries neural SDFs di-
+rectly, without surface-mesh generation, for incompressible Navier–Stokes and linear elasticity [1,2].
+• Validated 2D flow against body-fitted solutions for Re = 100–5000 and 3D flow against triangle-mesh SBM;
+showed second-order L2 convergence for elasticity and scaled to∼3 million DOFs [1,2].
+• Derived a priori error estimates linking uniform INR error to elliptic PDE accuracy, implying INR tolerance ε ∼
+hk+1 to preserve FEM convergence [6].
+• Co-authored FlowBench, 10,000+ fully resolved 2D/3D flow and heat-transfer simulations over complex geome-
+tries for benchmarking neural simulators [3].
+Research Scientist Intern May 2026 – Aug. 2026
+Argonne National Laboratory | Advisor: Dr. Gary Hu
+• Built a modular diffusion framework for multi-physics inverse design, combining joint objective conditioning with
+differentiable forward surrogates.
+• Combined classifier-free guidance, diffusion posterior sampling, and conflict-free gradient composition; analyzed
+per-objective gradient dynamics to assess feasibility during sampling.
+AI Research Fellow Jan. 2023 – Aug. 2023
+FuseMachine AI, Kathmandu, Nepal
+• Developed predictive-maintenance pipelines using classical ML and deployed inference as FastAPI microservices.
+Computational Systems Engineer (Founding Team) Nov. 2021 – Aug. 2023
+Zebec & Mokshya, Remote
+• Built Rust and TypeScript backends for financial computation, emphasizing numerical correctness, memory safety,
+and reliable services.
+Technical Skills
+Languages: C++17/20, Python, CUDA, Rust, TypeScript/JavaScript
+Scientific computing: FEM/FVM, shifted boundary methods, octree AMR, PETSc, MPI, OpenMP
+Machine learning: PyTorch, JAX, LibTorch, ONNX Runtime, diffusion models, neural SDFs
+Teaching
+Instructor, MLOps (non-credit professional course), Translational AI Center, Iowa State University Selected Conference Presentations
+Fall 2024
+USNCCM18, Chicago, IL, July 2025: Advancing mechanics simulation with AI-based geometric representation.
+MLCAS 2025, Tokyo, Aug. 2025: Mechanics-informed phenotyping of maize stalks using octree-based elastic sim-
+ulations.
+WCCM-PANACM 2024, Vancouver, July 2024: Direct simulation of Navier–Stokes on neural SDFs using the shifted
+boundary method.
+Samundra Karki 2

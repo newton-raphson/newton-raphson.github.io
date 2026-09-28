@@ -25,11 +25,11 @@ const Articles = () => {
   ];
 
   return (
-    <main className="page">
+    <main id="main-content" className="page">
       <div className="container-wide">
         <section className="content">
           <article className="content-card">
-            <h2>Blogs</h2>
+            <h1>Blogs</h1>
             <p className="section-subtitle">
               Writing and highlights across research and applied systems.
             </p>
