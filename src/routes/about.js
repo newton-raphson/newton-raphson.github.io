@@ -2,33 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import portrait from "../assets/image/pp.png";
 import cv from "../assets/cv/resume.pdf";
+import Geometry from "../component/geometry";
 
-function Geometry() {
-  const lines = Array.from({ length: 23 }, (_, i) => {
-    const latitude = (i / 22) * Math.PI;
-    const points = Array.from({ length: 81 }, (_, j) => {
-      const longitude = (j / 80) * Math.PI * 2;
-      const r = 128 * (1 + 0.16 * Math.sin(3 * longitude) * Math.sin(latitude) ** 2);
-      const x = r * Math.sin(latitude) * Math.cos(longitude);
-      const y = r * Math.cos(latitude);
-      const z = r * Math.sin(latitude) * Math.sin(longitude);
-      return `${200 + x * 0.91 + z * 0.32},${185 + y * 0.9 - z * 0.38}`;
-    }).join(" ");
-    return <polyline key={i} points={points} />;
-  });
-  return <div className="geometry-panel">
-    <div className="figure-label"><span>NEURAL GEOMETRY</span><span>FIG. 01</span></div>
-    <svg viewBox="0 0 400 370" role="img" aria-label="An abstract wireframe of an implicit three-dimensional surface">
-      <defs><radialGradient id="glow"><stop stopColor="#cbe9a0" stopOpacity=".22"/><stop offset="1" stopColor="#cbe9a0" stopOpacity="0"/></radialGradient></defs>
-      <circle cx="200" cy="185" r="175" fill="url(#glow)" />
-      <g fill="none" stroke="#bee38e" strokeWidth=".85">{lines}</g>
-      <path d="M35 304H365M68 335V60" stroke="#69816a" strokeWidth=".5" strokeDasharray="3 5" />
-      <circle cx="68" cy="304" r="3" fill="#bee38e" />
-      <text x="345" y="324" fill="#b6c4b4" fontSize="11">x</text><text x="52" y="65" fill="#b6c4b4" fontSize="11">y</text>
-    </svg>
-    <div className="figure-caption"><span>From learned shapes to physical systems.</span><span>φ(x) = 0</span></div>
-  </div>;
-}
 
 const themes = [
   ["01", "Neural geometry", "Implicit neural representations and signed distance fields for understanding, representing, and editing complex 3D shapes.", "INR / SDF / GEOMETRY AI"],
